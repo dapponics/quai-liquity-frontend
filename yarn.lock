@@ -1777,8 +1777,8 @@ __metadata:
 
 "@liquity/chicken-bonds@file:.yalc/@liquity/chicken-bonds::locator=%40liquity%2Fdev-frontend%40workspace%3Apackages%2Fdev-frontend":
   version: 0.0.1
-  resolution: "@liquity/chicken-bonds@file:.yalc/@liquity/chicken-bonds#.yalc/@liquity/chicken-bonds::hash=9e683d&locator=%40liquity%2Fdev-frontend%40workspace%3Apackages%2Fdev-frontend"
-  checksum: 02d064f55504178cc59d0975773d4e257c3e31c1a520bb7f61a1ab987ac5ad23b900206c1ceecffbef75c6738da399c11e9855372022840b1f47c210446fd1a9
+  resolution: "@liquity/chicken-bonds@file:.yalc/@liquity/chicken-bonds#.yalc/@liquity/chicken-bonds::hash=f4a3c3&locator=%40liquity%2Fdev-frontend%40workspace%3Apackages%2Fdev-frontend"
+  checksum: c16397fed7724fd7ab81ca45b8531dc73437d494543e36b4c290fb1f10acc0b9ef541cad8b7a60789c02f4639a25bb951451b1eb6ca2ed5403fca6f79dd7f13b
   languageName: node
   linkType: hard
 
@@ -1834,7 +1834,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.57.1
     "@typescript-eslint/parser": ^5.57.1
     "@vitejs/plugin-react-swc": ^3.6.0
-    connectkit: ^1.7.3
+    connectkit: ^1.8.2
     cross-env: 7.0.3
     eslint: ^8.38.0
     eslint-plugin-react-hooks: ^4.6.0
@@ -8861,9 +8861,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"connectkit@npm:^1.7.3":
-  version: 1.7.3
-  resolution: "connectkit@npm:1.7.3"
+"connectkit@npm:^1.8.2":
+  version: 1.8.2
+  resolution: "connectkit@npm:1.8.2"
   dependencies:
     buffer: ^6.0.3
     detect-browser: ^5.3.0
@@ -8879,7 +8879,7 @@ __metadata:
     react-dom: 17.x || 18.x
     viem: 2.x
     wagmi: 2.x
-  checksum: a998742be4cc07556efad47f79deb61fe38ee418f5b70d5f8b5b6d7021265864f7462a72e8eaedaec02776a1cb5d43e0adbc6c9de92356732cefedbd47906de3
+  checksum: 8c8e6715797429188a978d91b6624a2a44558a5b85227d79b71196ade4eb3444a68e1c95d10117fdf2657cf0c5cadabeb60bf4156c1c8d2daceabb8d748af4d7
   languageName: node
   linkType: hard
 
