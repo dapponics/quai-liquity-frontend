@@ -1777,8 +1777,8 @@ __metadata:
 
 "@liquity/chicken-bonds@file:.yalc/@liquity/chicken-bonds::locator=%40liquity%2Fdev-frontend%40workspace%3Apackages%2Fdev-frontend":
   version: 0.0.1
-  resolution: "@liquity/chicken-bonds@file:.yalc/@liquity/chicken-bonds#.yalc/@liquity/chicken-bonds::hash=9e683d&locator=%40liquity%2Fdev-frontend%40workspace%3Apackages%2Fdev-frontend"
-  checksum: 02d064f55504178cc59d0975773d4e257c3e31c1a520bb7f61a1ab987ac5ad23b900206c1ceecffbef75c6738da399c11e9855372022840b1f47c210446fd1a9
+  resolution: "@liquity/chicken-bonds@file:.yalc/@liquity/chicken-bonds#.yalc/@liquity/chicken-bonds::hash=f4a3c3&locator=%40liquity%2Fdev-frontend%40workspace%3Apackages%2Fdev-frontend"
+  checksum: c16397fed7724fd7ab81ca45b8531dc73437d494543e36b4c290fb1f10acc0b9ef541cad8b7a60789c02f4639a25bb951451b1eb6ca2ed5403fca6f79dd7f13b
   languageName: node
   linkType: hard
 
@@ -1896,7 +1896,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 4.17.0
     "@typescript-eslint/parser": 4.18.0
     eslint: 7.22.0
-    eslint-plugin-tsdoc: 0.2.11
+    eslint-plugin-tsdoc: 0.4.0
     fast-check: 2.13.0
     mocha: 8.3.2
     npm-run-all: 4.1.5
@@ -1927,7 +1927,7 @@ __metadata:
     cross-env: 7.0.3
     dotenv: 8.2.0
     eslint: 7.22.0
-    eslint-plugin-tsdoc: 0.2.11
+    eslint-plugin-tsdoc: 0.4.0
     ethers: 5.7.2
     fs-extra: 9.1.0
     hardhat: ^2.6.1
@@ -2288,15 +2288,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/tsdoc-config@npm:0.14.0":
-  version: 0.14.0
-  resolution: "@microsoft/tsdoc-config@npm:0.14.0"
+"@microsoft/tsdoc-config@npm:0.17.1":
+  version: 0.17.1
+  resolution: "@microsoft/tsdoc-config@npm:0.17.1"
   dependencies:
-    "@microsoft/tsdoc": 0.13.0
-    ajv: ~6.12.6
+    "@microsoft/tsdoc": 0.15.1
+    ajv: ~8.12.0
     jju: ~1.4.0
-    resolve: ~1.19.0
-  checksum: 280171ffa7343781ebc77b2bf0942877cfee6de5b9d85d3864df28b1c2b73f702b3556040ec0941a6d57786e74b793847a27b557e9b225ca2601297ddb2af6f7
+    resolve: ~1.22.2
+  checksum: 19d3301af62c62eac5b3c244564070b18c529c0985d299b9e93d04cc75d2c1342458063d494c941f814c7154463ee364acdc76ea552db92cbbb0a3e28bbca87c
   languageName: node
   linkType: hard
 
@@ -2307,10 +2307,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/tsdoc@npm:0.13.0":
-  version: 0.13.0
-  resolution: "@microsoft/tsdoc@npm:0.13.0"
-  checksum: 2c1addb1b85e8aa88ba0345dc33b9f513b6ea74823d545a683ad152da0ea1df0224c63ea9542ba5554d7a0999fec8726aa44596f4fa325714217471c946f8222
+"@microsoft/tsdoc@npm:0.15.1":
+  version: 0.15.1
+  resolution: "@microsoft/tsdoc@npm:0.15.1"
+  checksum: 526f125c48b4e5511571ee552ff38691405131c0b72df85f091b1aa47571315e7ba5258cd9f48c41b8ef80f2c1f489e9b09c8b1fcc1599b7f8a35f917e03ec65
   languageName: node
   linkType: hard
 
@@ -6298,7 +6298,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^6.10.0, ajv@npm:^6.10.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4, ajv@npm:~6.12.6":
+"ajv@npm:^6.10.0, ajv@npm:^6.10.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -6319,6 +6319,18 @@ __metadata:
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
   checksum: b64164202869e24555c215c997f358eb7f902e0d52da016fa853842a71f4dd3bc28d6708e803c3e666fdbba947d68f231d46751639b6caae05442d87cf61a466
+  languageName: node
+  linkType: hard
+
+"ajv@npm:~8.12.0":
+  version: 8.12.0
+  resolution: "ajv@npm:8.12.0"
+  dependencies:
+    fast-deep-equal: ^3.1.1
+    json-schema-traverse: ^1.0.0
+    require-from-string: ^2.0.2
+    uri-js: ^4.2.2
+  checksum: 4dc13714e316e67537c8b31bc063f99a1d9d9a497eb4bbd55191ac0dcd5e4985bbb71570352ad6f1e76684fb6d790928f96ba3b2d4fd6e10024be9612fe3f001
   languageName: node
   linkType: hard
 
@@ -10878,13 +10890,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tsdoc@npm:0.2.11":
-  version: 0.2.11
-  resolution: "eslint-plugin-tsdoc@npm:0.2.11"
+"eslint-plugin-tsdoc@npm:0.4.0":
+  version: 0.4.0
+  resolution: "eslint-plugin-tsdoc@npm:0.4.0"
   dependencies:
-    "@microsoft/tsdoc": 0.13.0
-    "@microsoft/tsdoc-config": 0.14.0
-  checksum: 734e8895712e2aa84d7da629b0e1f5ae90395b932772457bf201a056a7c409f3360f16f77b6234392bf7f04015add460028cd8028fd4daf333ae08fd5a5a61a1
+    "@microsoft/tsdoc": 0.15.1
+    "@microsoft/tsdoc-config": 0.17.1
+  checksum: 331ab299df18d351d4e85c4bd3d758a3fb8891ab0595ef4924e8c7a6fc611ba20d45f19e62c00c5916b9504f973c68dfc07504c7ebfb93c43dbd00cf6a5962c6
   languageName: node
   linkType: hard
 
@@ -13485,6 +13497,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hasown@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "hasown@npm:2.0.2"
+  dependencies:
+    function-bind: ^1.1.2
+  checksum: e8516f776a15149ca6c6ed2ae3110c417a00b62260e222590e54aa367cbcd6ed99122020b37b7fbdf05748df57b265e70095d7bf35a47660587619b15ffb93db
+  languageName: node
+  linkType: hard
+
 "he@npm:1.2.0, he@npm:^1.1.1":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
@@ -14405,12 +14426,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-core-module@npm:^2.1.0, is-core-module@npm:^2.13.0":
+"is-core-module@npm:^2.13.0":
   version: 2.13.1
   resolution: "is-core-module@npm:2.13.1"
   dependencies:
     hasown: ^2.0.0
   checksum: 256559ee8a9488af90e4bad16f5583c6d59e92f0742e9e8bb4331e758521ee86b810b93bae44f390766ffbc518a0488b18d9dab7da9a5ff997d499efc9403f7c
+  languageName: node
+  linkType: hard
+
+"is-core-module@npm:^2.16.0":
+  version: 2.16.0
+  resolution: "is-core-module@npm:2.16.0"
+  dependencies:
+    hasown: ^2.0.2
+  checksum: 98aa14eaee864c2e86fff4e08813e0da3ca7ac38dd0a43b9f10aeec48bfbc4827e2677349adb626f66921caef7fa9e2745c80b8b7cafe8ac24d46dc8124cc216
   languageName: node
   linkType: hard
 
@@ -20864,13 +20894,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:~1.19.0":
-  version: 1.19.0
-  resolution: "resolve@npm:1.19.0"
+"resolve@npm:~1.22.2":
+  version: 1.22.9
+  resolution: "resolve@npm:1.22.9"
   dependencies:
-    is-core-module: ^2.1.0
-    path-parse: ^1.0.6
-  checksum: a05b356e47b85ad3613d9e2a39a824f3c27f4fcad9c9ff6c7cc71a2e314c5904a90ab37481ad0069d03cab9eaaac6eb68aca1bc3355fdb05f1045cd50e2aacea
+    is-core-module: ^2.16.0
+    path-parse: ^1.0.7
+    supports-preserve-symlinks-flag: ^1.0.0
+  bin:
+    resolve: bin/resolve
+  checksum: dd7da6c4ccc60bb4884f636b987102bb1cae6c486f7172361719a7f52769660c9a83a2d3520bef71d91f3da27e4fb8a40404c63ee4372a15863f3208bef5af67
   languageName: node
   linkType: hard
 
@@ -20903,13 +20936,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@~1.19.0#~builtin<compat/resolve>":
-  version: 1.19.0
-  resolution: "resolve@patch:resolve@npm%3A1.19.0#~builtin<compat/resolve>::version=1.19.0&hash=c3c19d"
+"resolve@patch:resolve@~1.22.2#~builtin<compat/resolve>":
+  version: 1.22.9
+  resolution: "resolve@patch:resolve@npm%3A1.22.9#~builtin<compat/resolve>::version=1.22.9&hash=c3c19d"
   dependencies:
-    is-core-module: ^2.1.0
-    path-parse: ^1.0.6
-  checksum: 2443b94d347e6946c87c85faf13071f605e609e0b54784829b0ed2b917d050bfc1cbaf4ecc6453f224cfa7d0c5dcd97cbb273454cd210bee68e4af15c1a5abc9
+    is-core-module: ^2.16.0
+    path-parse: ^1.0.7
+    supports-preserve-symlinks-flag: ^1.0.0
+  bin:
+    resolve: bin/resolve
+  checksum: 8db5c0f16ab65f58c036cb5be0964605c97c29b9fdf1e20f298ec027e2a4fd96ad0413aa14f6e761629956dc552cd478c2f9b6c5a07e37e4c85209090162501e
   languageName: node
   linkType: hard
 
