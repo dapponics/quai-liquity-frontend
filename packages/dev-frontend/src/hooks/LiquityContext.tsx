@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { Provider } from "@ethersproject/abstract-provider";
 import { Web3Provider } from "@ethersproject/providers";
-import { useClient, useAccount, useChainId, useWalletClient } from "wagmi";
+import { useClient, useAccount, useChainId, useWalletClient, useConfig } from "wagmi";
 
 import {
   BlockPolledLiquityStore,
@@ -12,6 +12,8 @@ import {
 
 import { LiquityFrontendConfig, getConfig } from "../config";
 import { BatchedProvider } from "../providers/BatchingProvider";
+import { useQuaisSigner } from "../providers/useQuaisProvider";
+import { Signer } from "quais";
 
 type LiquityContextValue = {
   config: LiquityFrontendConfig;
@@ -34,8 +36,11 @@ export const LiquityProvider: React.FC<LiquityProviderProps> = ({
   unsupportedNetworkFallback,
   unsupportedMainnetFallback
 }) => {
+
+  const [signer, seteSigner] = useState<Signer | undefined>(undefined);
   const chainId = useChainId();
   const client = useClient();
+  console.log({chainId, client})
   const provider =
   client &&
   new Web3Provider(
@@ -45,13 +50,13 @@ export const LiquityProvider: React.FC<LiquityProviderProps> = ({
         params: params as any
       }),
       chainId
-      );
-      
+    );
+  
   const account = useAccount();
   const walletClient = useWalletClient();
       
   console.log({provider, account, walletClient})
-  const signer =
+  /*const signer =
     account.address &&
     walletClient.data &&
     new Web3Provider(
@@ -61,17 +66,30 @@ export const LiquityProvider: React.FC<LiquityProviderProps> = ({
           params: params as any
         }),
       chainId
-    ).getSigner(account.address);
+    ).getSigner(account.address);*/
+  useEffect(() => {
+    // Define the async function to fetch data
+    const fetchData = async () => {
+      const signer = await useQuaisSigner({chainId})
+      seteSigner(signer)
+    };
+
+    fetchData();  // Call the async function
+  }, []); 
+
+  
 
   const [config, setConfig] = useState<LiquityFrontendConfig>();
-
+  
+  console.log({config, signer})
   const connection = useMemo(() => {
+
     if (config && provider && signer && account.address) {
       const batchedProvider = new BatchedProvider(provider, chainId);
       // batchedProvider._debugLog = true;
-
+      console.log({batchedProvider})
       try {
-        return _connectByChainId(batchedProvider, signer, chainId, {
+        return _connectByChainId(batchedProvider, signer as any, chainId, {
           userAddress: account.address,
           frontendTag: config.frontendTag,
           useStore: "blockPolled"
@@ -82,6 +100,7 @@ export const LiquityProvider: React.FC<LiquityProviderProps> = ({
     }
   }, [config, provider, signer, account.address, chainId]);
 
+  console.log({connection})
   useEffect(() => {
     getConfig().then(setConfig);
   }, []);
@@ -90,9 +109,9 @@ export const LiquityProvider: React.FC<LiquityProviderProps> = ({
     return <>{loader}</>;
   }
 
-  if (config?.testnetOnly && chainId === 1) {
-    return <>{unsupportedMainnetFallback}</>;
-  }
+  // if (config?.testnetOnly && chainId === 1) {
+  //   return <>{unsupportedMainnetFallback}</>;
+  // }
 
   if (!connection) {
     return <>{unsupportedNetworkFallback}</>;
@@ -103,7 +122,7 @@ export const LiquityProvider: React.FC<LiquityProviderProps> = ({
 
   return (
     <LiquityContext.Provider
-      value={{ config, account: account.address, provider: connection.provider, liquity }}
+      value={{ config, account: account.address, provider: provider, liquity }}
     >
       {children}
     </LiquityContext.Provider>

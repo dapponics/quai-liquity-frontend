@@ -7,12 +7,20 @@ import { Box, Button, Flex } from "theme-ui";
 import { Icon } from "../Icon.js";
 import { pelagusConnector } from '../../providers/pelagusConnector.js';
 import { useQuaisSigner } from '../../providers/useQuaisProvider.js';
-const WalletPelagusConnector = () => {
+import { useConfig } from 'wagmi';
 
-    const handleConnect = () => {
+interface WalletPelagusConnectorProps {
+    onConnected: (connected: boolean) => void
+}
+
+const WalletPelagusConnector = (props: WalletPelagusConnectorProps) => {
+
+    const config = useConfig();
+   
+    const handleConnect = async () => {
         if (window.pelagus) {
-            const signer = useQuaisSigner({ chainId: 9000 });
-            
+            const result = await config.connectors[0].connect()
+            props.onConnected(!!result)
         }
         else {
             window.location.href = "https://chromewebstore.google.com/detail/pelagus/nhccebmfjcbhghphpclcfdkkekheegop";
