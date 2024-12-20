@@ -109,9 +109,9 @@ export const LiquityProvider: React.FC<LiquityProviderProps> = ({
     return <>{loader}</>;
   }
 
-  // if (config?.testnetOnly && chainId === 1) {
-  //   return <>{unsupportedMainnetFallback}</>;
-  // }
+  if (config?.testnetOnly && chainId === 1) {
+    return <>{unsupportedMainnetFallback}</>;
+  }
 
   if (!connection) {
     return <>{unsupportedNetworkFallback}</>;

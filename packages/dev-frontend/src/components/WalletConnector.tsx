@@ -4,6 +4,7 @@ import { Icon } from "./Icon";
 import WalletPelagusConnector from './WalletPelagusConnector'
 import { useEffect, useMemo, useState } from "react";
 import { Connector, useConfig } from "wagmi";
+import { useLiquity } from "../hooks/LiquityContext";
 
 type WalletConnectorProps = React.PropsWithChildren<{
   loader?: React.ReactNode;
